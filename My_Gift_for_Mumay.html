@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head><style>
+body, html {
+ height: 100%;
+ margin: 0;  
+}
+
+.valentinesimg {
+  background-image: url('https://i.pinimg.com/564x/3a/0b/89/3a0b89330cc26bd29d25cfacc4dc3308.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: contain; /* or "cover" or specific dimensions like "100% 100%" */
+  position: relative;
+  color: red;
+  font-size: 20px; /* Adjusted font size */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.topleft {
+  position: absolute;
+  color: red;
+  top: 50%; /* Move to 50% from top */
+  left: 50%; /* Move to 50% from left */
+  transform: translate(-50%, -50%); /* Centering trick */
+  font-size: 20px; /* Adjusted font size */
+}
+
+.middle {
+  font-size: 20px; /* Adjusted font size */
+  text-align: center;
+}
+
+hr {
+ margin: auto;
+ width: 40%;
+}
+
+#amx {
+  font-size: 20px; /* Adjusted font size */
+}
+
+.bittomleft {
+  font-size: 20px; /* Adjusted font size */
+  position: absolute;
+  bottom: 0;
+  left: 12px;
+}
+</style>
+
+</head><body>
+<div class="valentinesimg">
+ <div class="topleft">
+  <p>FOR MUMAY</p>
+</div>
+<div class="middle">
+ <h1>Ready for the Surprise?</h1>
+ <hr>
+ <p id="amx"></p>
+</div>
+<div class="bittomleft">
+ <p>Created by VEN</p>
+</div>
+</div>
+
+<script>
+var countDownDate = new Date("Feb 14, 2024 00:00:00").getTime();
+
+var countdownfunction=setInterval(function() {
+
+ var now= new Date().getTime();
+var distance=countDownDate - now;
+
+var days=Math.floor(distance / (1000 * 60 * 60 * 24));
+ var hours=Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var minutes=Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds=Math.floor((distance % (1000 * 60)) / 1000);
+  
+document.getElementById("amx").innerHTML = days + "D" + hours + "H" + minutes + "M" + seconds+ "S";
+
+if (distance < 0) {
+   clearInterval(countdownfunction);
+   document.getElementById("amx").innerHTML ="HAPPY VALENTINES LOVE <br><br> First time ko gawin ito and sana kahit simple ma appreciate mo. Gusto ko sabihin na masaya akong nakilala kita love and di ako mag sasawa na laging sabihin ANG SWERTE KO SAYO NA NAKILALA KITA, sana kahit anong mangyari magawa lang natin lahat malapasan kahit anong problema. THANKYOU LOVE SOBRANG MAHAL NA MAHAL KITA. Wag mo muna i back wait mo yung final gift ko^^";
+   setTimeout(function() {
+       window.location = "https://m.youtube.com/watch?v=g5Mtin2YslA ";
+   }, 60000); // 60000 milliseconds = 1 minute
+}
+
+}, 1000);
+</script>
+
+
+</body></html>
